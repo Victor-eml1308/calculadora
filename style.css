@@ -1,1 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1e1e24;
+}
+
+.calculator {
+    background-color: #0f0f12;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+    width: 320px;
+}
+
+#display {
+    width: 100%;
+    height: 70px;
+    background-color: #1c1c22;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: right;
+    padding: 0 15px;
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    background-color: #2d2d38;
+    color: #ffffff;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #3d3d4b;
+}
+
+/* Cores especiais para operadores e limpar */
+button.operator {
+    background-color: #ff9500;
+    color: white;
+}
+
+button.operator:hover {
+    background-color: #e08400;
+}
+
+button.clear {
+    background-color: #ff3b30;
+    color: white;
+}
+
+button.clear:hover {
+    background-color: #d32f2f;
+}
+
+button.equal {
+    background-color: #34c759;
+    color: white;
+    grid-column: span 2; /* Faz o botão de igual ocupar duas colunas */
+}
+
+button.equal:hover {
+    background-color: #28a745;
+}
